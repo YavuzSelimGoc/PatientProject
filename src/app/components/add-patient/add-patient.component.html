@@ -1,0 +1,35 @@
+
+           <div class="card card-primary">
+               <div class="card-header">
+                 <h3 class="card-title">Hasta Kayıt Formu</h3>
+               </div>
+               <!-- /.card-header -->
+               <!-- form start -->
+               <form [formGroup]="patientAddForm">
+                 <div class="card-body">
+                   <div class="form-group">
+                     <label for="exampleInputEmail1">Hasta Adı</label>
+                     <input  class="form-control" formControlName="patientName" placeholder="Adınızı giriniz">
+                   </div>
+                   <div class="form-group">
+                     <label for="exampleInputPassword1">Hasta Soyadı</label>
+                     <input  class="form-control" formControlName="patientLastName" placeholder="Soyadınızı Giriniz">
+                   </div>
+                   <!-- <div class="form-group">
+                    <label for="exampleInputPassword1">Cinsiyet</label>
+                    <input  class="form-control"  formControlName="gender" placeholder="">
+                  </div> -->
+                  <select formControlName="gender">
+                    <option [ngValue]="null" >Cinsiyet Seçiniz</option>
+                    <option  [ngValue]="true">Erkek</option>
+                    <option  [ngValue]="false">Kadın</option>
+                  </select>
+                 </div>
+                 <!-- /.card-body -->
+           
+                 <div class="card-footer">
+                   <button type="submit"  (click)="add()" class="btn btn-primary">Kaydet</button>
+                 </div>
+               </form>
+             </div>
+     

@@ -42,10 +42,10 @@
                                     <td>{{item.doctorLastName}}</td>
                                     <td>{{item.departman}}</td>
                                     <td><p *ngIf="item.gender">Erkek</p> <p *ngIf="!item.gender">Kadın</p></td>
-                                    <td ><a *ngIf="!item.status" (click)="active(item);"  class="btn btn-success">Aktif Et</a> <a *ngIf="item.status" (click)="passive(item);"  class="btn btn-warning">Pasif Et</a></td>
+                                    <td ><a *ngIf="!item.status" (click)="active(item);"  href="admin/listDoctor" class="btn btn-success">Aktif Et</a> <a *ngIf="item.status" (click)="passive(item);" href="admin/listDoctor" class="btn btn-warning">Pasif Et</a></td>
                                    
                                     <td><a routerLink="/admin/updateDoctor/doctor/{{item.doctorID}}" class="btn btn-primary">Güncelle</a></td>
-                                    <td><a (click)="delete(item);"  class="btn btn-danger">Sil</a></td>
+                                    <td><a (click)="delete(item);" href="admin/listDoctor" class="btn btn-danger">Sil</a></td>
                                 </tr>
 
                             </tbody>

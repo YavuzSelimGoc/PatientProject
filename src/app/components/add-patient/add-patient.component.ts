@@ -26,7 +26,7 @@ export class AddPatientComponent implements OnInit{
     if(this.patientAddForm.valid){
       let categoryModel =Object.assign({},this.patientAddForm.value) 
       this.patientService.add(categoryModel).subscribe(response=>{
-        this.router.navigate(["/admin"])
+        this.router.navigate(["/admin/listPatient"])
       });
     }
     else {

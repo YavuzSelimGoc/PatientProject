@@ -16,6 +16,9 @@ import { UpdatePatientComponent } from './components/update-patient/update-patie
 import { ListDoctorComponent } from './components/list-doctor/list-doctor.component';
 import { AddDoctorComponent } from './components/add-doctor/add-doctor.component';
 import { UpdateDoctorComponent } from './components/update-doctor/update-doctor.component';
+import { ListReservationComponent } from './components/list-reservation/list-reservation.component';
+import { AddReservationComponent } from './components/add-reservation/add-reservation.component';
+import { UpdateReservationComponent } from './components/update-reservation/update-reservation.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { UpdateDoctorComponent } from './components/update-doctor/update-doctor.
     ListDoctorComponent,
     AddDoctorComponent,
     UpdateDoctorComponent,
+    ListReservationComponent,
+    AddReservationComponent,
+    UpdateReservationComponent,
   
   ],
   imports: [

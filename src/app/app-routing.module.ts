@@ -1,3 +1,6 @@
+import { UpdateReservationComponent } from './components/update-reservation/update-reservation.component';
+import { AddReservationComponent } from './components/add-reservation/add-reservation.component';
+import { ListReservationComponent } from './components/list-reservation/list-reservation.component';
 import { UpdateDoctorComponent } from './components/update-doctor/update-doctor.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -24,9 +27,12 @@ const routes: Routes = [
       { path: "listPatient", component: ListPatientComponent },
       { path: "listDoctor", component: ListDoctorComponent },
       { path: "addPatient", component: AddPatientComponent },
+      { path: "addReservation", component: AddReservationComponent },
       { path: "addDoctor", component: AddDoctorComponent },
+      { path: "listReservation", component: ListReservationComponent },
       {path:"updatePatient/patient/:patientID",component:UpdatePatientComponent},
       {path:"updateDoctor/doctor/:doctorID",component:UpdateDoctorComponent},
+      {path:"updateReservation/reservation/:reservationID",component:UpdateReservationComponent},
     ]
   }
 

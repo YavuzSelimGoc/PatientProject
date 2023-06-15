@@ -27,7 +27,7 @@ export class AddDoctorComponent {
     if(this.doctorAddForm.valid){
       let categoryModel =Object.assign({},this.doctorAddForm.value) 
       this.doctorService.add(categoryModel).subscribe(response=>{
-        this.router.navigate(["/admin"])
+        this.router.navigate(["/admin/listDoctor"])
       });
     }
     else {

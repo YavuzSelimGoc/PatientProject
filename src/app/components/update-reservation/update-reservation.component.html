@@ -1,0 +1,39 @@
+
+<div class="card card-primary">
+    <div class="card-header">
+      <h3 class="card-title">Rezervasyon Formu</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form [formGroup]="reservationUpdateForm">
+      <div class="card-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Doktor </label>
+          <select class="form-select"formControlName="doctorId" >
+            <option *ngFor="let item of doctor"  [value]="item.doctorID">{{item.doctorName}}</option>
+          </select> 
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Hasta </label>
+          <select class="form-select" formControlName="patientId">
+            <option *ngFor="let item of patient" [value]="item.patientID">{{item.patientName}}</option>
+          </select> 
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Randevu Tarihi</label>
+            <input class="form-select" formControlName="reservationDate" type="date">
+          </div>
+        <!-- <div class="form-group">
+         <label for="exampleInputPassword1">Cinsiyet</label>
+         <input  class="form-control"  formControlName="gender" placeholder="">
+       </div> -->
+     
+      </div>
+      <!-- /.card-body -->
+
+      <div class="card-footer">
+        <button type="submit"  (click)="update()"  class="btn btn-primary">Kaydet</button>
+      </div>
+    </form>
+  </div>
+

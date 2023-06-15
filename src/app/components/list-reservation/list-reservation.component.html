@@ -1,7 +1,7 @@
 <div class="col-12">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Hasta Tablosu</h3>
+            <h3 class="card-title">Rezervasyon Tablosu</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -18,31 +18,34 @@
                                 <tr>
                                     <th class="sorting sorting_asc" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-sort="ascending"
-                                        aria-label="Rendering engine: activate to sort column descending">Adı
+                                        aria-label="Rendering engine: activate to sort column descending">Hasta Adı
                                         </th>
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                                        aria-label="Browser: activate to sort column ascending">Soyadı</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                                        aria-label="Platform(s): activate to sort column ascending">Cinsiyeti</th>
-                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                                        aria-label="Engine version: activate to sort column ascending">Durum
+                                        aria-label="Browser: activate to sort column ascending">Dokotor Adı</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                        aria-label="Engine version: activate to sort column ascending"> Randevu Tarihi
                                     </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                        aria-label="Engine version: activate to sort column ascending"> Randevu Durumu
+                                    </th>
+                                    
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
                                         aria-label="CSS grade: activate to sort column ascending">Güncelle</th>
                                   
                                         <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                                        aria-label="CSS grade: activate to sort column ascending">Sil</th>
+                                        aria-label="CSS grade: activate to sort column ascending">Randevuyu Sil(Kalıcı)</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let item of patient">
+                                <tr *ngFor="let item of reservationDto">
                                     <td>{{item.patientName}}</td>
-                                    <td>{{item.patientLastName}}</td>
-                                    <td><p *ngIf="item.gender">Erkek</p> <p *ngIf="!item.gender">Kadın</p></td>
-                                    <td ><a *ngIf="!item.patientStatus" (click)="active(item);" href="admin/listPatient"  class="btn btn-success">Aktif Et</a> <a *ngIf="item.patientStatus" href="admin/listPatient" (click)="passive(item);"  class="btn btn-warning">Pasif Et</a></td>
+                                    <td>{{item.doctorName}}</td>
+                                    <td>{{item.reservationDate}}</td>
+                                 
+                                    <td ><a *ngIf="!item.reservationStatus" (click)="active(item);"  class="btn btn-success">Aktif Et</a> <a *ngIf="item.reservationStatus" (click)="passive(item);"  class="btn btn-warning">Pasif Et</a></td>
                                    
-                                    <td><a routerLink="/admin/updatePatient/patient/{{item.patientID}}" class="btn btn-primary">Güncelle</a></td>
-                                    <td><a (click)="delete(item);"  href="admin/listPatient" class="btn btn-danger">Sil</a></td>
+                                    <td><a routerLink="/admin/updateReservation/reservation/{{item.reservationId}}" class="btn btn-primary">Güncelle</a></td> 
+                                    <td><a (click)="delete(item);"  href="admin/listReservation" class="btn btn-danger">Sil</a></td>
                                 </tr>
 
                             </tbody>

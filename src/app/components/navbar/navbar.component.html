@@ -1,32 +1,79 @@
-
 <aside _ngcontent-exl-c17="" class="main-sidebar sidebar-dark-primary elevation-4"><a _ngcontent-exl-c17=""
-    href="index3.html" class="brand-link"><img _ngcontent-exl-c17="" src="../../../assets/img/AdminLTELogo.png"
-        alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8;"><span
-        _ngcontent-exl-c17="" class="brand-text font-weight-light">Patient  Panel</span></a>
-<div _ngcontent-exl-c17="" class="sidebar">
-    
-    <nav _ngcontent-exl-c17="" class="mt-2">
-        <ul _ngcontent-exl-c17="" data-widget="treeview" role="menu" data-accordion="false"
-            class="nav nav-pills nav-sidebar flex-column">
-            <li _ngcontent-exl-c17="" class="nav-item has-treeview"><a _ngcontent-exl-c17="" 
-                class="nav-link"><i _ngcontent-exl-c17="" class="nav-icon fas fa-copyright"></i>
-                <p _ngcontent-exl-c17=""> Bölgesel  <i class="right fas fa-angle-left"></i>
-                </p>
-            </a>
-            <ul _ngcontent-exl-c17="" class="nav nav-treeview">
-                <li _ngcontent-exl-c17="" class="nav-item"><a _ngcontent-exl-c17=""
-                        class="nav-link"><i _ngcontent-exl-c17=""
-                            class="far fa-circle nav-icon"></i>
-                        <p _ngcontent-exl-c17="" routerLink="category">Kategoriler</p>
-                    </a></li>
-                    <li _ngcontent-exl-c17="" class="nav-item"><a _ngcontent-exl-c17=""
-                        class="nav-link"><i _ngcontent-exl-c17=""
-                            class="far fa-circle nav-icon"></i>
-                        <p _ngcontent-exl-c17="" routerLink="addCategory">Kategori Ekle</p>
-                    </a></li>
+        href="index3.html" class="brand-link"><img _ngcontent-exl-c17="" src="../../../assets/img/AdminLTELogo.png"
+            alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8;"><span
+            _ngcontent-exl-c17="" class="brand-text font-weight-light">Patient Panel</span></a>
+    <div _ngcontent-exl-c17="" class="sidebar">
+
+        <nav _ngcontent-exl-c17="" class="mt-2">
+            <ul _ngcontent-exl-c17="" data-widget="treeview" role="menu" data-accordion="false"
+                class="nav nav-pills nav-sidebar flex-column">
+                <li _ngcontent-exl-c17="" class="nav-item has-treeview"><a _ngcontent-exl-c17="" class="nav-link"><i
+                            _ngcontent-exl-c17="" class="nav-icon fas fa-copyright"></i>
+                        <p _ngcontent-exl-c17=""> Doktor <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul _ngcontent-exl-c17="" class="nav nav-treeview">
+                        <li _ngcontent-exl-c17="" class="nav-item"><a _ngcontent-exl-c17="" class="nav-link"><i
+                                    _ngcontent-exl-c17="" class="far fa-circle nav-icon"></i>
+                                <p _ngcontent-exl-c17="" routerLink="listDoctor">Doktorlar</p>
+                            </a></li>
+                        <li _ngcontent-exl-c17="" class="nav-item"><a _ngcontent-exl-c17="" class="nav-link"><i
+                                    _ngcontent-exl-c17="" class="far fa-circle nav-icon"></i>
+                                <p _ngcontent-exl-c17="" routerLink="addDoctor">Doktor Ekle</p>
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-table"></i>
+                        <p>
+                            Hasta
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a routerLink="listPatient"class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Hastalar</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="addPatient"class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Hasta Ekle</p>
+                            </a>
+                        </li>
+             
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-calendar"></i>
+                        <p>
+                            Randevu
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                    
+                        <li class="nav-item">
+                            <a routerLink="listReservation"class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Randevular</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="addReservation"class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Randevu Ekle</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
             </ul>
-        </li>
-        </ul>
-    </nav>
-</div>
+
+        </nav>
+    </div>
 </aside>
